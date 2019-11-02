@@ -1,0 +1,2 @@
+'Hi, <br /><br /> You just have one more step to join the GymnasticsHQ SkillTrakker community! <br /><br />Click the link below to create your password: <br /><br /><p style="text-align:center;"><a href="' . $create_pass_link . '">' . $create_pass_link . "</a></p><br />We are so excited to have you and can't wait to see you work hard and improve your gymnastics!<br /><br />Please do not reply to this email, if you have questions please send me an email: <a href='mailto:gymnasticshq@gmail.com '>gymnasticshq@gmail.com </a><br /><br />Jessica";
+   
