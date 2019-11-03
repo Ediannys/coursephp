@@ -33,7 +33,7 @@ try {
 
     //Recipients
     $mail->setFrom('cursosweb.aem@gmail.com', 'SkillTrakker');
-    $mail->addAddress('cursosweb.aem@gmail.com', 'Joe User'); 
+    $mail->addAddress($argv[1], 'Joe User'); 
     //$mail->addAttachment('videos/skilltrakkertutorial.MOV');     // Add a recipient
     
     // Content

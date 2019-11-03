@@ -1,14 +1,13 @@
 <?php
-$email=$argv[1];
-$nuevoarchivo = fopen($email.'.sh', "w+");
-fwrite($nuevoarchivo,"#!/bin/sh"."\nphp enviarprueba.php ".$email);
-fclose($nuevoarchivo);
 
 
-$command="at now + 1 minute -f ".$email.'.sh';
+$subs_email =$_GET['email'];
+$command="at now + 1 minute -f enviarcorreoconparametro.sh ".$subs_email;
 echo $command;
 
-if(function_exists('system'))
+
+
+    if(function_exists('system'))
     {
         ob_start();
         system($command , $return_var);
@@ -43,4 +42,4 @@ if(function_exists('system'))
         $return_var = 1;
     }
     
-  unlink($email.'.sh');
+    return array($output ,$return_var);
