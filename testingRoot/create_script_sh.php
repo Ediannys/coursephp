@@ -4,7 +4,7 @@ $nuevoarchivo = fopen($email.'.sh', "w+");
 fwrite($nuevoarchivo,"#!/bin/sh"."\nphp run_email_script.php ".$email);
 fclose($nuevoarchivo);
 $command="at now + 1 minute -f ".$email.'.sh';
-echo $command;
+
 
 function terminal($command)
 {
@@ -44,7 +44,6 @@ function terminal($command)
         $return_var = 1;
     }
  
-    print_r (array('output' => $output , 'status' => $return_var));
 }
 terminal($command); 
 unlink($email.'.sh');
